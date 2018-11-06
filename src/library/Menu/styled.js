@@ -7,6 +7,9 @@ import {
   menuItemTheme
 } from './themes';
 
+import type { CreateRootNode } from '../styles/types';
+import type { MenuItemDefaultProps, MenuItemProps } from './types';
+
 export const MenuRoot = createStyledComponent(
   'div',
   {},
@@ -89,15 +92,21 @@ export const MenuGroupTitleRoot = createStyledComponent(
   }
 );
 
-// These styles are based off of Button, with significant changes
-export const MenuItemRoot = createStyledComponent(
-  'div',
-  ({ disabled, isHighlighted, theme: baseTheme, variant }) => {
-    let theme = menuItemTheme(baseTheme);
+export const createMenuItemRootNode: CreateRootNode<
+  MenuItemProps,
+  MenuItemDefaultProps
+> = (props, defaultProps) => {
+  const { element = defaultProps.element } = props;
 
-    if (variant) {
-      // prettier-ignore
-      theme = {
+  return createStyledComponent(
+    element,
+    // These styles are based off of Button, with significant changes
+    ({ disabled, isHighlighted, theme: baseTheme, variant }) => {
+      let theme = menuItemTheme(baseTheme);
+
+      if (variant) {
+        // prettier-ignore
+        theme = {
       ...theme,
       MenuItem_backgroundColor_active: theme[`backgroundColor_${variant}_active`],
       MenuItem_backgroundColor_focus: theme[`backgroundColor_${variant}_focus`],
@@ -105,68 +114,72 @@ export const MenuItemRoot = createStyledComponent(
       MenuItem_color: theme[`color_${variant}`],
       MenuItemIcon_color: theme[`icon_color_${variant}`]
     };
-    }
+      }
 
-    return {
-      backgroundColor: isHighlighted && theme.MenuItem_backgroundColor_hover,
-      color: disabled ? theme.color_disabled : theme.MenuItem_color,
-      cursor: disabled ? 'default' : 'pointer',
-      fontWeight: theme.MenuItem_fontWeight,
-      padding: `${theme.MenuItem_paddingVertical} ${
-        theme.MenuItem_paddingHorizontal
-      }`,
-
-      '&:focus': {
-        backgroundColor: !disabled && theme.MenuItem_backgroundColor_focus,
-        outline: 0
-      },
-
-      '&:hover': {
-        backgroundColor: !disabled && theme.MenuItem_backgroundColor_hover
-      },
-
-      '&:active': {
-        backgroundColor: !disabled && theme.MenuItem_backgroundColor_active
-      },
-
-      '&[aria-selected="true"]': {
-        backgroundColor: isHighlighted
-          ? theme.MenuItem_backgroundColor_selectedHover
-          : theme.MenuItem_backgroundColor_selected,
-        fontWeight: theme.MenuItem_fontWeight_selected,
-
-        '&:active': {
-          backgroundColor:
-            !disabled && theme.MenuItem_backgroundColor_selectedActive
-        }
-      },
-
-      '& [role="img"]': {
-        boxSizing: 'content-box',
-        color: disabled ? null : theme.MenuItemIcon_color,
+      return {
+        backgroundColor: isHighlighted && theme.MenuItem_backgroundColor_hover,
+        color: disabled ? theme.color_disabled : theme.MenuItem_color,
+        cursor: disabled ? 'default' : 'pointer',
         display: 'block',
-        flex: '0 0 auto',
+        fontWeight: theme.MenuItem_fontWeight,
+        padding: `${theme.MenuItem_paddingVertical} ${
+          theme.MenuItem_paddingHorizontal
+        }`,
+        textDecoration: 'none',
 
-        '&:first-child': {
-          marginLeft:
-            theme.direction === 'rtl' ? theme.MenuItemIcon_margin : null,
-          marginRight:
-            theme.direction === 'ltr' ? theme.MenuItemIcon_margin : null
+        '&:focus': {
+          backgroundColor: !disabled && theme.MenuItem_backgroundColor_focus,
+          outline: 0
         },
 
-        '&:last-child': {
-          marginLeft:
-            theme.direction === 'ltr' ? theme.MenuItemIcon_margin : null,
-          marginRight:
-            theme.direction === 'rtl' ? theme.MenuItemIcon_margin : null
+        '&:hover': {
+          backgroundColor: !disabled && theme.MenuItem_backgroundColor_hover
+        },
+
+        '&:active': {
+          backgroundColor: !disabled && theme.MenuItem_backgroundColor_active
+        },
+
+        '&[aria-selected="true"]': {
+          backgroundColor: isHighlighted
+            ? theme.MenuItem_backgroundColor_selectedHover
+            : theme.MenuItem_backgroundColor_selected,
+          fontWeight: theme.MenuItem_fontWeight_selected,
+
+          '&:active': {
+            backgroundColor:
+              !disabled && theme.MenuItem_backgroundColor_selectedActive
+          }
+        },
+
+        '& [role="img"]': {
+          boxSizing: 'content-box',
+          color: disabled ? null : theme.MenuItemIcon_color,
+          display: 'block',
+          flex: '0 0 auto',
+
+          '&:first-child': {
+            marginLeft:
+              theme.direction === 'rtl' ? theme.MenuItemIcon_margin : null,
+            marginRight:
+              theme.direction === 'ltr' ? theme.MenuItemIcon_margin : null
+          },
+
+          '&:last-child': {
+            marginLeft:
+              theme.direction === 'ltr' ? theme.MenuItemIcon_margin : null,
+            marginRight:
+              theme.direction === 'rtl' ? theme.MenuItemIcon_margin : null
+          }
         }
-      }
-    };
-  },
-  {
-    displayName: 'MenuItem'
-  }
-);
+      };
+    },
+    {
+      displayName: 'MenuItem',
+      rootEl: element
+    }
+  );
+};
 
 export const MenuItemContent = createStyledComponent('span', {
   display: 'flex',
