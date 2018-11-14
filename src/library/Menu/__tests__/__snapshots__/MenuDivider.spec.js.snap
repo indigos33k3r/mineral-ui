@@ -38,8 +38,11 @@ exports[`MenuDivider demo examples Snapshots: separating-items 1`] = `
 .emotion-3 {
   color: #333840;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-3:focus {
@@ -147,8 +150,11 @@ exports[`MenuDivider demo examples Snapshots: separating-items 1`] = `
         <div
           className="emotion-33"
         >
-          <MenuItem>
+          <MenuItem
+            element="div"
+          >
             <MenuItem
+              element="div"
               onKeyDown={[Function]}
               tabIndex={0}
             >
@@ -189,8 +195,11 @@ exports[`MenuDivider demo examples Snapshots: separating-items 1`] = `
               />
             </MenuDivider>
           </MenuDivider>
-          <MenuItem>
+          <MenuItem
+            element="div"
+          >
             <MenuItem
+              element="div"
               onKeyDown={[Function]}
               tabIndex={0}
             >
@@ -221,8 +230,11 @@ exports[`MenuDivider demo examples Snapshots: separating-items 1`] = `
               </div>
             </MenuItem>
           </MenuItem>
-          <MenuItem>
+          <MenuItem
+            element="div"
+          >
             <MenuItem
+              element="div"
               onKeyDown={[Function]}
               tabIndex={0}
             >
@@ -269,8 +281,11 @@ exports[`MenuDivider demo examples Snapshots: separating-items 1`] = `
                     </h3>
                   </MenuGroupTitle>
                 </MenuGroupTitle>
-                <MenuItem>
+                <MenuItem
+                  element="div"
+                >
                   <MenuItem
+                    element="div"
                     onKeyDown={[Function]}
                     tabIndex={0}
                   >
@@ -301,8 +316,11 @@ exports[`MenuDivider demo examples Snapshots: separating-items 1`] = `
                     </div>
                   </MenuItem>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem
+                  element="div"
+                >
                   <MenuItem
+                    element="div"
                     onKeyDown={[Function]}
                     tabIndex={0}
                   >
@@ -351,8 +369,11 @@ exports[`MenuDivider demo examples Snapshots: separating-items 1`] = `
               <div
                 className="emotion-22"
               >
-                <MenuItem>
+                <MenuItem
+                  element="div"
+                >
                   <MenuItem
+                    element="div"
                     onKeyDown={[Function]}
                     tabIndex={0}
                   >
@@ -383,8 +404,11 @@ exports[`MenuDivider demo examples Snapshots: separating-items 1`] = `
                     </div>
                   </MenuItem>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem
+                  element="div"
+                >
                   <MenuItem
+                    element="div"
                     onKeyDown={[Function]}
                     tabIndex={0}
                   >

@@ -2563,8 +2563,11 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
 .emotion-8 {
   color: #333840;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-8:focus {
@@ -3026,6 +3029,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                       className="emotion-21"
                                     >
                                       <MenuItem
+                                        element="div"
                                         index={0}
                                         isHighlighted={false}
                                         item={
@@ -3038,6 +3042,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                         text="Light years"
                                       >
                                         <MenuItem
+                                          element="div"
                                           id="dropdown-7-item-0"
                                           index={0}
                                           isHighlighted={false}
@@ -3053,6 +3058,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                           text="Light years"
                                         >
                                           <MenuItem
+                                            element="div"
                                             id="dropdown-7-item-0"
                                             index={0}
                                             isHighlighted={false}
@@ -3064,7 +3070,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
                                             role="menuitem"
-                                            tabIndex={null}
+                                            tabIndex={0}
                                             text="Light years"
                                           >
                                             <div
@@ -3073,7 +3079,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
                                               role="menuitem"
-                                              tabIndex={null}
+                                              tabIndex={0}
                                             >
                                               <Styled(span)>
                                                 <span
@@ -3099,6 +3105,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                         </MenuItem>
                                       </MenuItem>
                                       <MenuItem
+                                        element="div"
                                         index={1}
                                         isHighlighted={false}
                                         item={
@@ -3111,6 +3118,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                         text="Star stuff"
                                       >
                                         <MenuItem
+                                          element="div"
                                           id="dropdown-7-item-1"
                                           index={1}
                                           isHighlighted={false}
@@ -3126,6 +3134,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                           text="Star stuff"
                                         >
                                           <MenuItem
+                                            element="div"
                                             id="dropdown-7-item-1"
                                             index={1}
                                             isHighlighted={false}
@@ -3137,7 +3146,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
                                             role="menuitem"
-                                            tabIndex={null}
+                                            tabIndex={0}
                                             text="Star stuff"
                                           >
                                             <div
@@ -3146,7 +3155,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
                                               role="menuitem"
-                                              tabIndex={null}
+                                              tabIndex={0}
                                             >
                                               <Styled(span)>
                                                 <span
@@ -3172,6 +3181,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                         </MenuItem>
                                       </MenuItem>
                                       <MenuItem
+                                        element="div"
                                         index={2}
                                         isHighlighted={false}
                                         item={
@@ -3184,6 +3194,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                         text="Encyclopaedia galactica"
                                       >
                                         <MenuItem
+                                          element="div"
                                           id="dropdown-7-item-2"
                                           index={2}
                                           isHighlighted={false}
@@ -3199,6 +3210,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                           text="Encyclopaedia galactica"
                                         >
                                           <MenuItem
+                                            element="div"
                                             id="dropdown-7-item-2"
                                             index={2}
                                             isHighlighted={false}
@@ -3210,7 +3222,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
                                             role="menuitem"
-                                            tabIndex={null}
+                                            tabIndex={0}
                                             text="Encyclopaedia galactica"
                                           >
                                             <div
@@ -3219,7 +3231,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
                                               role="menuitem"
-                                              tabIndex={null}
+                                              tabIndex={0}
                                             >
                                               <Styled(span)>
                                                 <span
@@ -3245,6 +3257,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                         </MenuItem>
                                       </MenuItem>
                                       <MenuItem
+                                        element="div"
                                         index={3}
                                         isHighlighted={false}
                                         item={
@@ -3257,6 +3270,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                         text="Cosmic ocean"
                                       >
                                         <MenuItem
+                                          element="div"
                                           id="dropdown-7-item-3"
                                           index={3}
                                           isHighlighted={false}
@@ -3272,6 +3286,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                           text="Cosmic ocean"
                                         >
                                           <MenuItem
+                                            element="div"
                                             id="dropdown-7-item-3"
                                             index={3}
                                             isHighlighted={false}
@@ -3283,7 +3298,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
                                             role="menuitem"
-                                            tabIndex={null}
+                                            tabIndex={0}
                                             text="Cosmic ocean"
                                           >
                                             <div
@@ -3292,7 +3307,7 @@ exports[`Dropdown demo examples Snapshots: placement 1`] = `
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
                                               role="menuitem"
-                                              tabIndex={null}
+                                              tabIndex={0}
                                             >
                                               <Styled(span)>
                                                 <span
@@ -4138,8 +4153,11 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
 .emotion-8 {
   color: #333840;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-8:focus {
@@ -4438,6 +4456,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                           className="emotion-21"
                                         >
                                           <MenuItem
+                                            element="div"
                                             index={0}
                                             isHighlighted={false}
                                             item={
@@ -4450,6 +4469,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                             text="Light years"
                                           >
                                             <MenuItem
+                                              element="div"
                                               id="dropdown-21-item-0"
                                               index={0}
                                               isHighlighted={false}
@@ -4465,6 +4485,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                               text="Light years"
                                             >
                                               <MenuItem
+                                                element="div"
                                                 id="dropdown-21-item-0"
                                                 index={0}
                                                 isHighlighted={false}
@@ -4476,7 +4497,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                                 onClick={[Function]}
                                                 onKeyDown={[Function]}
                                                 role="menuitem"
-                                                tabIndex={null}
+                                                tabIndex={0}
                                                 text="Light years"
                                               >
                                                 <div
@@ -4485,7 +4506,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                                   onClick={[Function]}
                                                   onKeyDown={[Function]}
                                                   role="menuitem"
-                                                  tabIndex={null}
+                                                  tabIndex={0}
                                                 >
                                                   <Styled(span)>
                                                     <span
@@ -4511,6 +4532,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                             </MenuItem>
                                           </MenuItem>
                                           <MenuItem
+                                            element="div"
                                             index={1}
                                             isHighlighted={false}
                                             item={
@@ -4523,6 +4545,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                             text="Star stuff"
                                           >
                                             <MenuItem
+                                              element="div"
                                               id="dropdown-21-item-1"
                                               index={1}
                                               isHighlighted={false}
@@ -4538,6 +4561,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                               text="Star stuff"
                                             >
                                               <MenuItem
+                                                element="div"
                                                 id="dropdown-21-item-1"
                                                 index={1}
                                                 isHighlighted={false}
@@ -4549,7 +4573,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                                 onClick={[Function]}
                                                 onKeyDown={[Function]}
                                                 role="menuitem"
-                                                tabIndex={null}
+                                                tabIndex={0}
                                                 text="Star stuff"
                                               >
                                                 <div
@@ -4558,7 +4582,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                                   onClick={[Function]}
                                                   onKeyDown={[Function]}
                                                   role="menuitem"
-                                                  tabIndex={null}
+                                                  tabIndex={0}
                                                 >
                                                   <Styled(span)>
                                                     <span
@@ -4584,6 +4608,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                             </MenuItem>
                                           </MenuItem>
                                           <MenuItem
+                                            element="div"
                                             index={2}
                                             isHighlighted={false}
                                             item={
@@ -4596,6 +4621,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                             text="Encyclopaedia galactica"
                                           >
                                             <MenuItem
+                                              element="div"
                                               id="dropdown-21-item-2"
                                               index={2}
                                               isHighlighted={false}
@@ -4611,6 +4637,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                               text="Encyclopaedia galactica"
                                             >
                                               <MenuItem
+                                                element="div"
                                                 id="dropdown-21-item-2"
                                                 index={2}
                                                 isHighlighted={false}
@@ -4622,7 +4649,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                                 onClick={[Function]}
                                                 onKeyDown={[Function]}
                                                 role="menuitem"
-                                                tabIndex={null}
+                                                tabIndex={0}
                                                 text="Encyclopaedia galactica"
                                               >
                                                 <div
@@ -4631,7 +4658,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                                   onClick={[Function]}
                                                   onKeyDown={[Function]}
                                                   role="menuitem"
-                                                  tabIndex={null}
+                                                  tabIndex={0}
                                                 >
                                                   <Styled(span)>
                                                     <span
@@ -4657,6 +4684,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                             </MenuItem>
                                           </MenuItem>
                                           <MenuItem
+                                            element="div"
                                             index={3}
                                             isHighlighted={false}
                                             item={
@@ -4669,6 +4697,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                             text="Cosmic ocean"
                                           >
                                             <MenuItem
+                                              element="div"
                                               id="dropdown-21-item-3"
                                               index={3}
                                               isHighlighted={false}
@@ -4684,6 +4713,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                               text="Cosmic ocean"
                                             >
                                               <MenuItem
+                                                element="div"
                                                 id="dropdown-21-item-3"
                                                 index={3}
                                                 isHighlighted={false}
@@ -4695,7 +4725,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                                 onClick={[Function]}
                                                 onKeyDown={[Function]}
                                                 role="menuitem"
-                                                tabIndex={null}
+                                                tabIndex={0}
                                                 text="Cosmic ocean"
                                               >
                                                 <div
@@ -4704,7 +4734,7 @@ exports[`Dropdown demo examples Snapshots: rtl 1`] = `
                                                   onClick={[Function]}
                                                   onKeyDown={[Function]}
                                                   role="menuitem"
-                                                  tabIndex={null}
+                                                  tabIndex={0}
                                                 >
                                                   <Styled(span)>
                                                     <span
@@ -4861,8 +4891,11 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
 .emotion-8 {
   color: #333840;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-8:focus {
@@ -5453,6 +5486,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                 className="emotion-21"
                                               >
                                                 <MenuItem
+                                                  element="div"
                                                   index={0}
                                                   isHighlighted={false}
                                                   item={
@@ -5465,6 +5499,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                   text="Light years"
                                                 >
                                                   <MenuItem
+                                                    element="div"
                                                     id="dropdown-11-item-0"
                                                     index={0}
                                                     isHighlighted={false}
@@ -5480,6 +5515,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                     text="Light years"
                                                   >
                                                     <MenuItem
+                                                      element="div"
                                                       id="dropdown-11-item-0"
                                                       index={0}
                                                       isHighlighted={false}
@@ -5491,7 +5527,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                       onClick={[Function]}
                                                       onKeyDown={[Function]}
                                                       role="menuitem"
-                                                      tabIndex={null}
+                                                      tabIndex={0}
                                                       text="Light years"
                                                     >
                                                       <div
@@ -5500,7 +5536,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                         onClick={[Function]}
                                                         onKeyDown={[Function]}
                                                         role="menuitem"
-                                                        tabIndex={null}
+                                                        tabIndex={0}
                                                       >
                                                         <Styled(span)>
                                                           <span
@@ -5526,6 +5562,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                   </MenuItem>
                                                 </MenuItem>
                                                 <MenuItem
+                                                  element="div"
                                                   index={1}
                                                   isHighlighted={false}
                                                   item={
@@ -5538,6 +5575,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                   text="Star stuff"
                                                 >
                                                   <MenuItem
+                                                    element="div"
                                                     id="dropdown-11-item-1"
                                                     index={1}
                                                     isHighlighted={false}
@@ -5553,6 +5591,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                     text="Star stuff"
                                                   >
                                                     <MenuItem
+                                                      element="div"
                                                       id="dropdown-11-item-1"
                                                       index={1}
                                                       isHighlighted={false}
@@ -5564,7 +5603,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                       onClick={[Function]}
                                                       onKeyDown={[Function]}
                                                       role="menuitem"
-                                                      tabIndex={null}
+                                                      tabIndex={0}
                                                       text="Star stuff"
                                                     >
                                                       <div
@@ -5573,7 +5612,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                         onClick={[Function]}
                                                         onKeyDown={[Function]}
                                                         role="menuitem"
-                                                        tabIndex={null}
+                                                        tabIndex={0}
                                                       >
                                                         <Styled(span)>
                                                           <span
@@ -5599,6 +5638,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                   </MenuItem>
                                                 </MenuItem>
                                                 <MenuItem
+                                                  element="div"
                                                   index={2}
                                                   isHighlighted={false}
                                                   item={
@@ -5611,6 +5651,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                   text="Encyclopaedia galactica"
                                                 >
                                                   <MenuItem
+                                                    element="div"
                                                     id="dropdown-11-item-2"
                                                     index={2}
                                                     isHighlighted={false}
@@ -5626,6 +5667,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                     text="Encyclopaedia galactica"
                                                   >
                                                     <MenuItem
+                                                      element="div"
                                                       id="dropdown-11-item-2"
                                                       index={2}
                                                       isHighlighted={false}
@@ -5637,7 +5679,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                       onClick={[Function]}
                                                       onKeyDown={[Function]}
                                                       role="menuitem"
-                                                      tabIndex={null}
+                                                      tabIndex={0}
                                                       text="Encyclopaedia galactica"
                                                     >
                                                       <div
@@ -5646,7 +5688,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                         onClick={[Function]}
                                                         onKeyDown={[Function]}
                                                         role="menuitem"
-                                                        tabIndex={null}
+                                                        tabIndex={0}
                                                       >
                                                         <Styled(span)>
                                                           <span
@@ -5672,6 +5714,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                   </MenuItem>
                                                 </MenuItem>
                                                 <MenuItem
+                                                  element="div"
                                                   index={3}
                                                   isHighlighted={false}
                                                   item={
@@ -5684,6 +5727,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                   text="Cosmic ocean"
                                                 >
                                                   <MenuItem
+                                                    element="div"
                                                     id="dropdown-11-item-3"
                                                     index={3}
                                                     isHighlighted={false}
@@ -5699,6 +5743,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                     text="Cosmic ocean"
                                                   >
                                                     <MenuItem
+                                                      element="div"
                                                       id="dropdown-11-item-3"
                                                       index={3}
                                                       isHighlighted={false}
@@ -5710,7 +5755,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                       onClick={[Function]}
                                                       onKeyDown={[Function]}
                                                       role="menuitem"
-                                                      tabIndex={null}
+                                                      tabIndex={0}
                                                       text="Cosmic ocean"
                                                     >
                                                       <div
@@ -5719,7 +5764,7 @@ exports[`Dropdown demo examples Snapshots: scrolling-container 1`] = `
                                                         onClick={[Function]}
                                                         onKeyDown={[Function]}
                                                         role="menuitem"
-                                                        tabIndex={null}
+                                                        tabIndex={0}
                                                       >
                                                         <Styled(span)>
                                                           <span
@@ -5878,8 +5923,11 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
 .emotion-8 {
   color: #333840;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-8:focus {
@@ -6383,6 +6431,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                       className="emotion-21"
                                     >
                                       <MenuItem
+                                        element="div"
                                         index={0}
                                         isHighlighted={false}
                                         item={
@@ -6395,6 +6444,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                         text="Light years star stuff"
                                       >
                                         <MenuItem
+                                          element="div"
                                           id="dropdown-5-item-0"
                                           index={0}
                                           isHighlighted={false}
@@ -6410,6 +6460,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                           text="Light years star stuff"
                                         >
                                           <MenuItem
+                                            element="div"
                                             id="dropdown-5-item-0"
                                             index={0}
                                             isHighlighted={false}
@@ -6421,7 +6472,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
                                             role="menuitem"
-                                            tabIndex={null}
+                                            tabIndex={0}
                                             text="Light years star stuff"
                                           >
                                             <div
@@ -6430,7 +6481,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
                                               role="menuitem"
-                                              tabIndex={null}
+                                              tabIndex={0}
                                             >
                                               <Styled(span)>
                                                 <span
@@ -6456,6 +6507,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                         </MenuItem>
                                       </MenuItem>
                                       <MenuItem
+                                        element="div"
                                         index={1}
                                         isHighlighted={false}
                                         item={
@@ -6468,6 +6520,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                         text="Harvesting star light citizens of distant epochs"
                                       >
                                         <MenuItem
+                                          element="div"
                                           id="dropdown-5-item-1"
                                           index={1}
                                           isHighlighted={false}
@@ -6483,6 +6536,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                           text="Harvesting star light citizens of distant epochs"
                                         >
                                           <MenuItem
+                                            element="div"
                                             id="dropdown-5-item-1"
                                             index={1}
                                             isHighlighted={false}
@@ -6494,7 +6548,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
                                             role="menuitem"
-                                            tabIndex={null}
+                                            tabIndex={0}
                                             text="Harvesting star light citizens of distant epochs"
                                           >
                                             <div
@@ -6503,7 +6557,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
                                               role="menuitem"
-                                              tabIndex={null}
+                                              tabIndex={0}
                                             >
                                               <Styled(span)>
                                                 <span
@@ -6529,6 +6583,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                         </MenuItem>
                                       </MenuItem>
                                       <MenuItem
+                                        element="div"
                                         index={2}
                                         isHighlighted={false}
                                         item={
@@ -6541,6 +6596,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                         text="Encyclopaedia galactica vastness is bearable"
                                       >
                                         <MenuItem
+                                          element="div"
                                           id="dropdown-5-item-2"
                                           index={2}
                                           isHighlighted={false}
@@ -6556,6 +6612,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                           text="Encyclopaedia galactica vastness is bearable"
                                         >
                                           <MenuItem
+                                            element="div"
                                             id="dropdown-5-item-2"
                                             index={2}
                                             isHighlighted={false}
@@ -6567,7 +6624,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
                                             role="menuitem"
-                                            tabIndex={null}
+                                            tabIndex={0}
                                             text="Encyclopaedia galactica vastness is bearable"
                                           >
                                             <div
@@ -6576,7 +6633,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
                                               role="menuitem"
-                                              tabIndex={null}
+                                              tabIndex={0}
                                             >
                                               <Styled(span)>
                                                 <span
@@ -6602,6 +6659,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                         </MenuItem>
                                       </MenuItem>
                                       <MenuItem
+                                        element="div"
                                         index={3}
                                         isHighlighted={false}
                                         item={
@@ -6614,6 +6672,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                         text="Shores of the cosmic ocean"
                                       >
                                         <MenuItem
+                                          element="div"
                                           id="dropdown-5-item-3"
                                           index={3}
                                           isHighlighted={false}
@@ -6629,6 +6688,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                           text="Shores of the cosmic ocean"
                                         >
                                           <MenuItem
+                                            element="div"
                                             id="dropdown-5-item-3"
                                             index={3}
                                             isHighlighted={false}
@@ -6640,7 +6700,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                             onClick={[Function]}
                                             onKeyDown={[Function]}
                                             role="menuitem"
-                                            tabIndex={null}
+                                            tabIndex={0}
                                             text="Shores of the cosmic ocean"
                                           >
                                             <div
@@ -6649,7 +6709,7 @@ exports[`Dropdown demo examples Snapshots: wide 1`] = `
                                               onClick={[Function]}
                                               onKeyDown={[Function]}
                                               role="menuitem"
-                                              tabIndex={null}
+                                              tabIndex={0}
                                             >
                                               <Styled(span)>
                                                 <span
@@ -6757,6 +6817,7 @@ Array [
       "aria-disabled": undefined,
       "children": "item 1",
       "disabled": undefined,
+      "element": "div",
       "id": "dropdown-32-item-0",
       "index": 0,
       "isHighlighted": false,

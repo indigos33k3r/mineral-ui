@@ -32,8 +32,11 @@ exports[`Menu demo examples Snapshots: basic 1`] = `
 .emotion-3 {
   color: #333840;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-3:focus {
@@ -155,8 +158,11 @@ exports[`Menu demo examples Snapshots: basic 1`] = `
 .emotion-25 {
   color: #de1b1b;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-25:focus {
@@ -201,8 +207,11 @@ exports[`Menu demo examples Snapshots: basic 1`] = `
 .emotion-29 {
   color: #afbacc;
   cursor: default;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-29:focus {
@@ -240,9 +249,11 @@ exports[`Menu demo examples Snapshots: basic 1`] = `
           className="emotion-31"
         >
           <MenuItem
+            element="div"
             onClick={[Function]}
           >
             <MenuItem
+              element="div"
               onClick={[Function]}
               onKeyDown={[Function]}
               tabIndex={0}
@@ -276,9 +287,11 @@ exports[`Menu demo examples Snapshots: basic 1`] = `
             </MenuItem>
           </MenuItem>
           <MenuItem
+            element="div"
             secondaryText="Secondary text"
           >
             <MenuItem
+              element="div"
               onKeyDown={[Function]}
               secondaryText="Secondary text"
               tabIndex={0}
@@ -334,9 +347,11 @@ exports[`Menu demo examples Snapshots: basic 1`] = `
                   </MenuGroupTitle>
                 </MenuGroupTitle>
                 <MenuItem
+                  element="div"
                   iconStart={<IconCloud />}
                 >
                   <MenuItem
+                    element="div"
                     iconStart={<IconCloud />}
                     onKeyDown={[Function]}
                     tabIndex={0}
@@ -401,9 +416,11 @@ exports[`Menu demo examples Snapshots: basic 1`] = `
                   </MenuItem>
                 </MenuItem>
                 <MenuItem
+                  element="div"
                   iconEnd={<IconCloud />}
                 >
                   <MenuItem
+                    element="div"
                     iconEnd={<IconCloud />}
                     onKeyDown={[Function]}
                     tabIndex={0}
@@ -478,9 +495,11 @@ exports[`Menu demo examples Snapshots: basic 1`] = `
                   </MenuDivider>
                 </MenuDivider>
                 <MenuItem
+                  element="div"
                   variant="danger"
                 >
                   <MenuItem
+                    element="div"
                     onKeyDown={[Function]}
                     tabIndex={0}
                     variant="danger"
@@ -545,10 +564,12 @@ exports[`Menu demo examples Snapshots: basic 1`] = `
                 </MenuItem>
                 <MenuItem
                   disabled={true}
+                  element="div"
                   onClick={[Function]}
                 >
                   <MenuItem
                     disabled={true}
+                    element="div"
                     tabIndex="-1"
                   >
                     <div
@@ -800,6 +821,7 @@ exports[`Menu demo examples Snapshots: custom-item 1`] = `
                 >
                   <MenuItem
                     avatar="/images/avatar.svg"
+                    element="div"
                     index={0}
                     isHighlighted={false}
                     item={
@@ -816,6 +838,7 @@ exports[`Menu demo examples Snapshots: custom-item 1`] = `
                   >
                     <CustomItem
                       avatar="/images/avatar.svg"
+                      element="div"
                       index={0}
                       isHighlighted={false}
                       item={
@@ -832,6 +855,7 @@ exports[`Menu demo examples Snapshots: custom-item 1`] = `
                     >
                       <Styled(div)
                         avatar="/images/avatar.svg"
+                        element="div"
                         index={0}
                         isHighlighted={false}
                         item={
@@ -897,6 +921,7 @@ exports[`Menu demo examples Snapshots: custom-item 1`] = `
                   </MenuItem>
                   <MenuItem
                     avatar="/images/avatar.svg"
+                    element="div"
                     index={1}
                     isHighlighted={false}
                     item={
@@ -913,6 +938,7 @@ exports[`Menu demo examples Snapshots: custom-item 1`] = `
                   >
                     <CustomItem
                       avatar="/images/avatar.svg"
+                      element="div"
                       index={1}
                       isHighlighted={false}
                       item={
@@ -929,6 +955,7 @@ exports[`Menu demo examples Snapshots: custom-item 1`] = `
                     >
                       <Styled(div)
                         avatar="/images/avatar.svg"
+                        element="div"
                         index={1}
                         isHighlighted={false}
                         item={
@@ -994,6 +1021,7 @@ exports[`Menu demo examples Snapshots: custom-item 1`] = `
                   </MenuItem>
                   <MenuItem
                     avatar="/images/avatar.svg"
+                    element="div"
                     index={2}
                     isHighlighted={false}
                     item={
@@ -1010,6 +1038,7 @@ exports[`Menu demo examples Snapshots: custom-item 1`] = `
                   >
                     <CustomItem
                       avatar="/images/avatar.svg"
+                      element="div"
                       index={2}
                       isHighlighted={false}
                       item={
@@ -1026,6 +1055,7 @@ exports[`Menu demo examples Snapshots: custom-item 1`] = `
                     >
                       <Styled(div)
                         avatar="/images/avatar.svg"
+                        element="div"
                         index={2}
                         isHighlighted={false}
                         item={
@@ -1132,8 +1162,11 @@ exports[`Menu demo examples Snapshots: data 1`] = `
 .emotion-3 {
   color: #333840;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-3:focus {
@@ -1248,8 +1281,11 @@ exports[`Menu demo examples Snapshots: data 1`] = `
 .emotion-24 {
   color: #de1b1b;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-24:focus {
@@ -1294,8 +1330,11 @@ exports[`Menu demo examples Snapshots: data 1`] = `
 .emotion-28 {
   color: #afbacc;
   cursor: default;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-28:focus {
@@ -1377,6 +1416,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                   className="emotion-29"
                 >
                   <MenuItem
+                    element="div"
                     index={0}
                     isHighlighted={false}
                     item={
@@ -1390,6 +1430,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                     text="Menu item with onClick"
                   >
                     <MenuItem
+                      element="div"
                       index={0}
                       isHighlighted={false}
                       item={
@@ -1432,6 +1473,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                     </MenuItem>
                   </MenuItem>
                   <MenuItem
+                    element="div"
                     index={1}
                     isHighlighted={false}
                     item={
@@ -1445,6 +1487,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                     text="Menu item"
                   >
                     <MenuItem
+                      element="div"
                       index={1}
                       isHighlighted={false}
                       item={
@@ -1493,6 +1536,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                     </MenuItem>
                   </MenuItem>
                   <MenuItem
+                    element="div"
                     iconStart={<IconCloud />}
                     index={2}
                     isHighlighted={false}
@@ -1506,6 +1550,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                     text="Icon at start"
                   >
                     <MenuItem
+                      element="div"
                       iconStart={<IconCloud />}
                       index={2}
                       isHighlighted={false}
@@ -1579,6 +1624,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                     </MenuItem>
                   </MenuItem>
                   <MenuItem
+                    element="div"
                     iconEnd={<IconCloud />}
                     index={3}
                     isHighlighted={false}
@@ -1592,6 +1638,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                     text="Icon at end"
                   >
                     <MenuItem
+                      element="div"
                       iconEnd={<IconCloud />}
                       index={3}
                       isHighlighted={false}
@@ -1677,6 +1724,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                     </MenuDivider>
                   </MenuDivider>
                   <MenuItem
+                    element="div"
                     index={4}
                     isHighlighted={false}
                     item={
@@ -1690,6 +1738,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                     variant="danger"
                   >
                     <MenuItem
+                      element="div"
                       index={4}
                       isHighlighted={false}
                       item={
@@ -1763,6 +1812,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                   </MenuItem>
                   <MenuItem
                     disabled={true}
+                    element="div"
                     index={5}
                     isHighlighted={false}
                     item={
@@ -1778,6 +1828,7 @@ exports[`Menu demo examples Snapshots: data 1`] = `
                   >
                     <MenuItem
                       disabled={true}
+                      element="div"
                       index={5}
                       isHighlighted={false}
                       item={
@@ -1859,8 +1910,11 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
 .emotion-3 {
   color: #333840;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-3:focus {
@@ -1982,8 +2036,11 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
 .emotion-26 {
   color: #de1b1b;
   cursor: pointer;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-26:focus {
@@ -2028,8 +2085,11 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
 .emotion-30 {
   color: #afbacc;
   cursor: default;
+  display: block;
   font-weight: 400;
   padding: 0.5em 1em;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-30:focus {
@@ -2120,6 +2180,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                   className="emotion-9"
                 >
                   <MenuItem
+                    element="div"
                     index={0}
                     isHighlighted={false}
                     item={
@@ -2133,6 +2194,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                     text="Menu item with onClick"
                   >
                     <MenuItem
+                      element="div"
                       index={0}
                       isHighlighted={false}
                       item={
@@ -2175,6 +2237,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                     </MenuItem>
                   </MenuItem>
                   <MenuItem
+                    element="div"
                     index={1}
                     isHighlighted={false}
                     item={
@@ -2188,6 +2251,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                     text="Menu item"
                   >
                     <MenuItem
+                      element="div"
                       index={1}
                       isHighlighted={false}
                       item={
@@ -2256,6 +2320,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                     </MenuGroupTitle>
                   </MenuGroupTitle>
                   <MenuItem
+                    element="div"
                     iconStart={<IconCloud />}
                     index={2}
                     isHighlighted={false}
@@ -2269,6 +2334,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                     text="Icon at start"
                   >
                     <MenuItem
+                      element="div"
                       iconStart={<IconCloud />}
                       index={2}
                       isHighlighted={false}
@@ -2342,6 +2408,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                     </MenuItem>
                   </MenuItem>
                   <MenuItem
+                    element="div"
                     iconEnd={<IconCloud />}
                     index={3}
                     isHighlighted={false}
@@ -2355,6 +2422,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                     text="Icon at end"
                   >
                     <MenuItem
+                      element="div"
                       iconEnd={<IconCloud />}
                       index={3}
                       isHighlighted={false}
@@ -2440,6 +2508,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                     </MenuDivider>
                   </MenuDivider>
                   <MenuItem
+                    element="div"
                     index={4}
                     isHighlighted={false}
                     item={
@@ -2453,6 +2522,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                     variant="danger"
                   >
                     <MenuItem
+                      element="div"
                       index={4}
                       isHighlighted={false}
                       item={
@@ -2526,6 +2596,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                   </MenuItem>
                   <MenuItem
                     disabled={true}
+                    element="div"
                     index={5}
                     isHighlighted={false}
                     item={
@@ -2541,6 +2612,7 @@ exports[`Menu demo examples Snapshots: grouped-data 1`] = `
                   >
                     <MenuItem
                       disabled={true}
+                      element="div"
                       index={5}
                       isHighlighted={false}
                       item={
@@ -2596,6 +2668,7 @@ Array [
     "props": Object {
       "children": "Item 1",
       "disabled": undefined,
+      "element": "div",
       "index": 0,
       "isHighlighted": false,
       "item": Object {
