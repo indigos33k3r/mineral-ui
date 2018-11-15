@@ -1,6 +1,6 @@
 /* @flow */
 import Dropdown from '../../../../../../library/Dropdown';
-import { NavItem } from '../../../../../../library/Navigation';
+import { NavItem, NavOverflowMenu } from '../../../../../../library/Navigation';
 import DemoLayout from '../../../common/DemoLayout';
 import PrimaryNav from '../../common/PrimaryNav';
 
@@ -8,14 +8,14 @@ export default {
   id: 'overflow',
   title: 'Overflow',
   description: `If there is not sufficient space to display all navigation
-items, they can be overflowed into a [Dropdown](/components/dropdown) menu.
-
-Use the \`overflowAtIndex\` property when using the \`items\` prop to define
-navigation items. Render a Dropdown yourself when using \`children\`.`,
-  scope: { DemoLayout, Dropdown, NavItem, PrimaryNav },
+items, e.g. when a media query dictates a narrow width, they can be overflowed
+into a [Dropdown](/components/dropdown) menu with the \`overflowAtIndex\`
+property.`,
+  scope: { DemoLayout, Dropdown, NavItem, NavOverflowMenu, PrimaryNav },
   source: `() => {
     const items = [
       {
+        disabled: true,
         href: '/malachite',
         text: 'Malachite'
       },
@@ -28,21 +28,26 @@ navigation items. Render a Dropdown yourself when using \`children\`.`,
         text: 'Magnetite'
       },
       {
+        disabled: true,
         href: '/aragonite',
         text: 'Aragonite'
       }
     ];
 
+    const onChange = (selectedIndex, event) => {
+      event.preventDefault();
+      console.log('fired!');
+    };
+
     return (
-      <DemoLayout style={{ width: '22em' }}>
-        <PrimaryNav>
-          <NavItem href={items[0].href}>{items[0].text}</NavItem>
-          <NavItem href={items[1].href}>{items[1].text}</NavItem>
-          <Dropdown data={items.slice(2)}>
-            <NavItem>More</NavItem>
-          </Dropdown>
+      <DemoLayout style={{ width: '23em' }}>
+        <PrimaryNav overflowAtIndex={2} onChange={onChange}>
+          {items.map((item) => {
+            return <NavItem key={item.href} {...item}>{item.text}</NavItem>
+          })}
         </PrimaryNav>
-        <PrimaryNav items={items} overflowAtIndex={2} />
+
+        <PrimaryNav items={items} overflowAtIndex={2} onChange={onChange}/>
       </DemoLayout>
     );
   }`

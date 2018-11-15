@@ -69,7 +69,7 @@ export type MenuItemDefaultProps = {
 
 export type MenuItemPropGetter = (props?: Object) => Object;
 
-type MenuItemRenderFn = (props?: MenuItemRenderProps) => React$Node;
+export type MenuItemRenderFn = (props?: MenuItemRenderProps) => React$Node;
 
 type MenuItemRenderProps = {
   props: Object

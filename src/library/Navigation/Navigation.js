@@ -1,18 +1,13 @@
 /* @flow */
 import React, { Children, cloneElement, Component } from 'react';
-import composeEventHandlers from '../utils/composeEventHandlers';
-import Dropdown from '../Dropdown';
-import { MenuItem } from '../Menu';
-import IconArrowDropdownDown from '../Icon/IconArrowDropdownDown';
 import { INTERNAL_TYPE, PREFIX } from './constants';
 import { NavigationRoot } from './styled';
 import NavItem from './NavItem';
+import NavOverflowMenu from './NavOverflowMenu';
 
 import type {
   AnchorEvent,
-  MenuItemRenderProps,
   NavigationDefaultProps,
-  NavigationItem,
   NavigationProps
 } from './types';
 
@@ -29,7 +24,7 @@ export default class Navigation extends Component<NavigationProps> {
   render() {
     const {
       align,
-      items,
+      items: ignoreItems,
       minimal,
       secondary,
       type: typeProp,
@@ -52,44 +47,30 @@ export default class Navigation extends Component<NavigationProps> {
 
     return (
       <NavigationRoot {...rootProps}>
-        {items
-          ? this.renderFromData({ prefix, type })
-          : this.renderFromChildren({ prefix, type })}
+        {this.renderFromData({ prefix, type })}
       </NavigationRoot>
     );
   }
 
-  renderFromChildren = (typeAndPrefix: Object) => {
-    // $FlowFixMe — Flow throws an error if you don't destructure `data` here,
-    // even though it should be unecessary
-    const renderDropdown = (child, { data, ...childProps }) => {
-      const dropdownProps = {
-        children: cloneElement(child.props.children, {
-          ...childProps,
-          ...this.getDropdownTriggerProps()
-        }),
-        data: this.getDropdownData({ data, ...childProps }),
-        item: this.getDropdownItem()
-      };
-
-      return cloneElement(child, dropdownProps);
-    };
-
-    return Children.map(this.props.children, (child, index) => {
-      const childProps = this.getNavItemProps({
-        index,
-        ...child.props,
-        ...typeAndPrefix
-      });
-
-      return child.type === Dropdown
-        ? renderDropdown(child, childProps)
-        : cloneElement(child, childProps);
-    });
-  };
-
   renderFromData = (typeAndPrefix: Object) => {
-    const { items, overflowAtIndex } = this.props;
+    const {
+      children,
+      itemElement,
+      items: itemsProp,
+      messages,
+      overflowAtIndex
+    } = this.props;
+
+    const items = children
+      ? Children.map(children, (child) => {
+          const { children, ...rest } = child.props;
+          return {
+            child,
+            text: children,
+            ...rest
+          };
+        })
+      : itemsProp;
 
     let overflowData;
     if (items && overflowAtIndex) {
@@ -98,7 +79,8 @@ export default class Navigation extends Component<NavigationProps> {
 
     return (
       items &&
-      items.map(({ disabled, text, ...restItem }, index) => {
+      items.length &&
+      items.map(({ disabled, child, text, ...restItem }, index) => {
         let navItemProps = {
           ...this.getNavItemProps({
             index,
@@ -111,28 +93,27 @@ export default class Navigation extends Component<NavigationProps> {
 
         if (overflowAtIndex && index >= overflowAtIndex) {
           if (index === overflowAtIndex) {
-            const dropdownProps = {
-              data: this.getDropdownData({
-                data: overflowData,
-                disabled,
-                index
-              }),
-              item: this.getDropdownItem()
-            };
-            navItemProps = {
-              ...navItemProps,
-              ...this.getDropdownTriggerProps()
+            const menuProps = {
+              data: overflowData,
+              disabled,
+              onClick: this.handleClick,
+              index,
+              itemElement,
+              messages,
+              ...typeAndPrefix
             };
 
-            return (
-              <Dropdown key={index} {...dropdownProps}>
-                <NavItem {...navItemProps} />
-              </Dropdown>
-            );
+            return <NavOverflowMenu key={index} {...menuProps} />;
           } else {
             return;
           }
         }
+
+        // return child ? (
+        //   cloneElement(child, { key: index, ...navItemProps })
+        // ) : (
+        //   <NavItem key={index} {...navItemProps} />
+        // );
         return <NavItem key={index} {...navItemProps} />;
       })
     );
@@ -168,7 +149,7 @@ export default class Navigation extends Component<NavigationProps> {
       // TODO: This doesn't seem to work for disabled overflow items
       onClick: !disabled
         ? this.handleClick
-        : (event) => {
+        : (selectedIndex, event) => {
             event.preventDefault();
           },
       selected: selected || index === selectedIndex,
@@ -177,56 +158,8 @@ export default class Navigation extends Component<NavigationProps> {
     };
   };
 
-  getDropdownData = ({
-    data,
-    disabled,
-    index
-  }: {
-    data: Array<NavigationItem>,
-    disabled?: boolean,
-    index: number
-  }) =>
-    // $FlowFixMe: Flow does not recognize that it is mapping over NavigationItems
-    data.map(({ onClick, ...item }) => ({
-      ...item,
-      'data-index': index,
-      onClick: composeEventHandlers(
-        onClick,
-        !disabled
-          ? this.handleClick
-          : (event) => {
-              event.preventDefault();
-            }
-      )
-    }));
-
-  getDropdownItem = () => {
-    const { itemElement } = this.props;
-    return (props: ?MenuItemRenderProps) => {
-      const common = {
-        element: itemElement,
-        role: null,
-        tabIndex: -1
-      };
-      const itemProps = props ? { ...props.props, ...common } : common;
-      return <MenuItem {...itemProps} />;
-    };
-  };
-
-  getDropdownTriggerProps = () => {
-    const { messages } = this.props;
-
-    return {
-      'aria-label': messages && messages.moreLabel,
-      children: messages && messages.moreText,
-      element: 'button',
-      href: null,
-      iconEnd: <IconArrowDropdownDown />,
-      onClick: null
-    };
-  };
-
-  handleClick = (event: AnchorEvent) => {
+  // TODO: Switch order of params?
+  handleClick = (selectedIndexTemp: number, event: AnchorEvent) => {
     event.persist();
     const { currentTarget: target } = event;
     const selectedIndex = parseInt(target.getAttribute('data-index'));

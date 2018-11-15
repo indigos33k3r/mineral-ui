@@ -6,34 +6,57 @@ import type {
   ComponentThemeFn,
   ThemeValue
 } from '../themes/types';
-import type { MenuItemType } from '../Menu/types';
+import type { MenuItemRenderFn, MenuItemType } from '../Menu/types';
 
 type Align = $Keys<typeof ALIGN>;
+// This purposefully references $Values instead of $Keys
+type InternalType = $Values<typeof INTERNAL_TYPE>;
+type ItemElement = React$Element<*> | string;
 type Items = Array<NavigationItem>;
 type Messages = {
   moreLabel: string,
   moreText: string
 };
-type Type = $Keys<typeof TYPE>;
-
-export type NavigationItem = MenuItemType & {
-  icon?: React$Element<*>,
-  maxWidth?: number | string
-};
-
+type OnChange = (
+  selectedIndex: number,
+  event: SyntheticEvent<HTMLAnchorElement>
+) => void;
+// This purposefully references $Values instead of $Keys
+type Prefix = $Values<typeof PREFIX>;
 type SharedNavigationProps = {
   align?: Align,
   children?: React$Node,
-  itemElement?: React$Element<*> | string,
+  itemElement?: ItemElement,
   items?: Items,
   maxItemWidth?: number | string,
   messages?: Messages,
-  onChange?: (
-    selectedIndex: number,
-    event: SyntheticEvent<HTMLAnchorElement>
-  ) => void,
+  onChange?: OnChange,
   overflowAtIndex?: number,
   selectedIndex?: number
+};
+type Type = $Keys<typeof TYPE>;
+
+export type AnchorEvent = SyntheticEvent<HTMLAnchorElement>;
+
+export type GetDropdownData = ({
+  data: Items,
+  disabled?: boolean,
+  index: number,
+  onClick: OnChange
+}) => Array<MenuItemType>;
+
+export type GetDropdownItem = (itemElement: ItemElement) => MenuItemRenderFn;
+
+export type MenuItemRenderProps = {
+  props: Object
+};
+
+// TODO: Alpha sort? Or something more logical?
+
+export type NavigationItem = MenuItemType & {
+  element?: React$Element<*>,
+  icon?: React$Element<*>,
+  maxWidth?: number | string
 };
 
 export type NavigationProps = SharedNavigationProps & {
@@ -48,29 +71,32 @@ export type NavigationDefaultProps = {
   messages: Messages
 };
 
-export type MenuItemRenderProps = {
-  props: Object
-};
-
-export type AnchorEvent = SyntheticEvent<HTMLAnchorElement>;
-
 export type NavItemProps = {
   children?: React$Node,
   disabled?: boolean,
-  element?: React$Element<*> | string,
+  element?: ItemElement,
   icon?: React$Element<*>,
   index?: number,
   maxWidth?: number | string,
   minimal?: boolean,
-  // This purposefully references $Values instead of $Keys
-  prefix?: $Values<typeof PREFIX>,
+  prefix?: Prefix,
   selected?: boolean,
-  // This purposefully references $Values instead of $Keys
-  type?: $Values<typeof INTERNAL_TYPE>
+  type?: InternalType
 };
 
 export type NavItemDefaultProps = {
   element: string
+};
+
+export type NavOverflowMenuProps = {
+  data: Items,
+  disabled?: boolean,
+  onClick: OnChange,
+  index: number,
+  itemElement: ItemElement,
+  messages: Messages,
+  prefix: Prefix,
+  type: InternalType
 };
 
 export type PrimaryNavProps = SharedNavigationProps & {
